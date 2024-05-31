@@ -1,0 +1,84 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.parent {
+    background-image: linear-gradient(to bottom right, #151635, #232560, #2A699B, #2A699B);
+
+    height: 55vh;
+}
+
+.fs-position {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.text-gray {
+    color: #d3d2d2;
+    font-size: 14px;
+}
+
+.position-custome {
+
+    top: 55vh;
+}
+
+.text-blue {
+    color: #7B9FFF;
+}
+
+.fs-small {
+    font-size: 13px;
+}
+
+.text-dark-custome {
+    color: #404B6F;
+}
+
+.fw-custom-bold {
+    font-weight: 600;
+}
+
+.des-custome {
+    color: #c0c0c0;
+
+
+}
+
+.fs-custome-head {
+    font-size: 30px;
+}
+
+.fs-custome {
+    font-size: 14px;
+}
+.justify-content-end-custome{
+    justify-content: end;
+}
+
+@include media-breakpoint-down(sm) {
+    .px-custome-md {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .position-custome {
+        top: 100vh;
+    }
+
+    .parent {
+        height: 90vh;
+
+    }
+    .justify-content-end-custome{
+        justify-content: center;
+      
+    }
+    .text-sm-center-custome {
+        text-align: center;
+    }
+
+    .fs-custome-head {
+        font-size: 20px;
+    }
+}

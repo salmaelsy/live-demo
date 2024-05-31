@@ -1,0 +1,72 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.parent {
+    background-image: url(../../assets/media/images/transformation3-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+
+    .overlay {
+        background-color: rgba($color: #032d50, $alpha: 0.8);
+    }
+}
+
+.after:after {
+    content: "";
+    display: block;
+    height: 0.5em;
+    width: 15%;
+    margin-right: -100%;
+    margin-left: 10px;
+    margin-top: 7px;
+    border-top: 3px solid #1d6097;
+}
+
+.fs-input {
+    font-size: 14px;
+}
+
+.btn-submit {
+    border: 1px solid #1d6097 !important;
+
+}
+
+.btn-submit:active {
+    color: #1d6097 !important;
+    background-color: #fff;
+    border: 1px solid #1d6097;
+
+}
+
+.btn-blue {
+    background-color: #2A699B;
+    border: none;
+}
+
+.fs-small {
+    font-size: 14px;
+}
+
+
+@include media-breakpoint-down(sm) {
+    .w-75, .w-100-custome {
+        width: 100% !important;
+    }
+
+    .text-sm-center-custome {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .after:after {
+        margin: auto;
+        margin-top: 7px;
+    }
+
+    .mt-sm-5-custome {
+        margin-top: 17px !important;
+    }
+}

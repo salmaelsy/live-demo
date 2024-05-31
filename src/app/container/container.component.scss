@@ -1,0 +1,32 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.container-margin-custome {
+    margin-left: 18rem;
+    padding-top: 2.5rem;
+    position: relative;
+
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+@include media-breakpoint-down(md) {
+    .container-margin-custome {
+        margin-left: 0rem !important;
+    }
+
+    .pos {
+        top: 4rem;
+        left: 0rem;
+        right: 0;
+        bottom: 0 !important;
+    }
+
+    .w-75 {
+        width: 100%;
+    }
+}

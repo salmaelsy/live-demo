@@ -1,0 +1,64 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+.parent{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #151635, #232560,#2A699B,#2A699B, #FC8A17,#FC8A17);
+}
+
+.after:after {
+    content: "";
+    display: block;
+    height: 0.5em;
+    width: 7%;
+    margin: auto;
+
+    margin-top: 7px;
+    border-top: 2px solid #a7a7a7;
+}
+.bg-custome{
+      background-color: rgba($color: #151635, $alpha: 0.5);
+}
+.fs-input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0;
+}
+.fs-input{
+    background-color: transparent;
+}
+
+
+.fs-input::placeholder{
+   color: #fff;
+}
+
+.btn-orange{
+    background-color: #FC8A17;
+    border: none;
+}
+.btn-blue {
+    background-color: #2A699B;
+    border: none;
+}
+.btn-submit:active {
+    color: #1d6097 !important;
+    background-color: #fff;
+    border: 1px solid #1d6097;
+
+}
+.cursor-poinnter{
+    cursor: pointer;
+}
+.fw-bold{
+    font-weight: 500;
+}
+
+@include media-breakpoint-down(sm) {
+    .parent{
+        height: 100vh;
+    }
+    .justify-content-sm-center-custom{
+justify-content: center !important;
+    }
+
+}

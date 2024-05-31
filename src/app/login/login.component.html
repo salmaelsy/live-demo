@@ -1,0 +1,60 @@
+<div class="parent py-3">
+    
+    <div class="container h-100  pb-5">
+        <div class="d-flex  justify-content-sm-center-custom justify-content-md-end align-items-center ">
+            <a class="nav-link text-white mt-1" routerLink="/trax/home" routerLinkActive="active">Home</a>
+                <button class="btn btn-orange rounded-pill py-1 px-2  ms-4">
+                    <a class="nav-link text-white py-1" routerLink="/trax/home" routerLinkActive="active"
+                        fragment="Contact">Contact Us</a>
+                </button>
+         </div>
+        <div class="row h-100 align-items-center d-flex pb-5">
+            <div class="col-md-6 p-3">
+                <img src="../../assets/media/images/logo2.png" alt="" class="w-25 mb-4">
+                <h5 class="text-white">Our vision is to elevate the Saudi Market business process and experience to a world-class business model, to convoy the Saudi Vision 2030</h5>
+            </div>
+            <div class="col-md-6  p-4">
+                <div class="bg-custome p-3 w-75 rounded-5 m-auto">
+                    <h3 class=" mb-2 text-white text-center mt-3">Login</h3>
+                    <h6 class="text-danger text-center" *ngIf="this.invalidData">Invalid username or password!</h6>
+
+                    <form class="px-3 py-3 pt-4" [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm)">
+                        <div class="mb-4 ">
+                            <div class="input-group">
+                                <div class="input-group-text bg-transparent border-0 border-bottom">
+                                    <i class="fa-solid fa-user text-white"></i>
+                                </div>
+                                <input type="text" class="form-control border-0 border-bottom fs-input text-white"
+                                    placeholder="Username" formControlName="userName" >
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="input-group">
+                                <div class="input-group-text bg-transparent border-0 border-bottom">
+                                    <i class="fa-solid fa-lock text-white"></i>
+                                </div>
+                                <input type="password" class="form-control border-0 border-bottom fs-input text-white"
+                                    placeholder="Password" formControlName="password">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mb-2">
+                            <p class="cursor-poinnter text-orange">Forgot password?</p>
+                        </div>
+                        <button class="btn btn-orange  w-100 rounded-pill text-white px-4 py-2 btn-submit"
+                            type="button"
+                            [disabled]="!this.loginForm.valid"
+                            (click)="submitForm(this.loginForm)"
+                            >Submit</button>
+                        <div class="d-flex justify-content-center mt-2">
+                            <p class="cursor-poinnter text-white">Don't have an account? <span class="text-orange">Register</span></p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

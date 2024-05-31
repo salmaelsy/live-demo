@@ -1,0 +1,56 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+.parent{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom right, #151635, #232560,#2A699B, );
+    color: #dcdcdc;
+    width: 18rem;
+z-index: 1000;
+
+}
+.fs-custome{
+    font-size: 16px;
+}
+.fs-nested{
+    font-size: 16px;
+    font-weight: 400;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.overlay{
+    position: fixed;
+    top: 8.5%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.453);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+.clickme{
+    background-color: rgba($color: #b1b1b1, $alpha: 0.3);
+
+
+    
+}
+
+@include media-breakpoint-down(md){
+    .side-nav{
+        z-index: 1050;
+        transition: all 0.5s ease-in-out;
+        transform: translateX(-22rem);
+        &.active{
+            transform:  translateX(0rem);
+        }
+    }
+    .overlay.active{
+        visibility: visible;
+        opacity: 1;
+    }
+}

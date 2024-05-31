@@ -1,0 +1,18 @@
+<div class="parent px-4  side-nav ">
+
+  <div class="py-3">
+    <img src="../../assets/media/images/output-onlinepngtools (2).png" alt="" class="w-50">
+  </div>
+  <ul class=" list-unstyled pt-4">
+    <li *ngFor="let item of items; let i = index"  class="mt-3 cursor-pointer clickable">
+      <p class="fs-custome mb-2 px-3 py-2" 
+      [ngClass]="{'clickme': i === 0, 'rounded-5': i === 0} ">
+        <span><i [ngClass]="item.icon" class="me-2"></i></span> {{ item.name }}
+      </p>
+    </li>
+  </ul>
+
+
+</div>
+
+<div class="overlay"></div>

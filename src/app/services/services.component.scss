@@ -1,0 +1,369 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+.fw {
+    font-weight: 500;
+}
+
+.fs-h1 {
+    font-size: 40px;
+}
+
+.animated {
+    font-size: 18px;
+    text-align: left;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+}
+
+.border-babyblue {
+    border: 3px solid;
+    border-color: #2A699B;
+}
+
+@keyframes typing {
+    0% {
+        content: "C";
+    }
+
+    1% {
+        content: "CR";
+    }
+
+    2% {
+        content: "CRM";
+    }
+
+    3% {
+        content: "CRM S";
+    }
+
+    4% {
+        content: "CRM So ";
+    }
+
+    5% {
+        content: "CRM Sol ";
+    }
+
+    6% {
+        content: "CRM Solu ";
+    }
+
+    7% {
+        content: "CRM Solut";
+    }
+
+    8% {
+        content: "CRM Soluti";
+    }
+
+    9% {
+        content: "CRM Solutio";
+    }
+
+    10% {
+        content: "CRM Solution";
+    }
+
+    11% {
+        content: "CRM Solutions";
+    }
+
+    12% {
+        content: "CRM Solution";
+    }
+
+    13% {
+        content: "CRM Solutio";
+    }
+
+    14% {
+        content: "CRM Soluti";
+    }
+
+    15% {
+        content: "CRM Solut";
+    }
+
+    16% {
+        content: "CRM Solu";
+    }
+
+    17% {
+        content: "CRM Sol";
+    }
+
+    18% {
+        content: "CRM So";
+    }
+
+    19% {
+        content: "CRM S";
+    }
+
+    20% {
+        content: "CRM";
+    }
+
+    21% {
+        content: "CR";
+    }
+
+    22% {
+        content: "C";
+    }
+
+    23% {
+        content: "";
+    }
+
+    24% {
+        content: "";
+    }
+
+    25% {
+        content: "E ";
+    }
+
+    26% {
+        content: "ER ";
+    }
+
+    27% {
+        content: "ERP ";
+    }
+
+    28% {
+        content: "ERP S ";
+    }
+
+    29% {
+        content: "ERP So ";
+    }
+
+    30% {
+        content: "ERP Sol ";
+    }
+
+    31% {
+        content: "ERP Solu";
+    }
+
+    32% {
+        content: "ERP Solut ";
+    }
+
+    33% {
+        content: "ERP Soluti ";
+    }
+
+    34% {
+        content: "ERP Solutio ";
+    }
+
+    35% {
+        content: "ERP Solution ";
+    }
+
+    36% {
+        content: "ERP Solutions ";
+    }
+
+    37% {
+        content: "ERP Solution";
+    }
+
+    38% {
+        content: "ERP Solutio";
+    }
+
+    39% {
+        content: "ERP Soluti";
+    }
+
+    40% {
+        content: "ERP Solut";
+    }
+
+    41% {
+        content: "ERP Solu";
+    }
+
+    42% {
+        content: "ERP Sol";
+    }
+
+    43% {
+        content: "ERP So";
+    }
+
+    44% {
+        content: "ERP S";
+    }
+
+    45% {
+        content: "ERP";
+    }
+
+    46% {
+        content: "ER";
+    }
+
+    47% {
+        content: "E";
+    }
+
+    48% {
+        content: "";
+    }
+
+    49% {
+        content: "";
+    }
+
+    50% {
+        content: "S ";
+    }
+
+    51% {
+        content: "S ";
+    }
+
+    52% {
+        content: "Su ";
+    }
+
+    53% {
+        content: "Sup";
+    }
+
+    54% {
+        content: "Supp";
+    }
+
+    55% {
+        content: "Suppl";
+    }
+
+    56% {
+        content: "Supply";
+    }
+
+    57% {
+        content: "Supply C";
+    }
+
+    58% {
+        content: "Supply Ch";
+    }
+
+    59% {
+        content: "Supply Cha ";
+    }
+
+    60% {
+        content: "Supply Chai";
+    }
+
+    61% {
+        content: "Supply Chain";
+    }
+
+    62% {
+        content: "Supply Chai";
+    }
+
+    63% {
+        content: "Supply Cha";
+    }
+
+    64% {
+        content: "Supply Ch";
+    }
+
+    65% {
+        content: "Supply ";
+    }
+
+    66% {
+        content: "Suppl";
+    }
+
+    67% {
+        content: "Supp";
+    }
+
+    68% {
+        content: "Sup";
+    }
+
+    69% {
+        content: "Su";
+    }
+
+    70% {
+        content: "S";
+    }
+
+    71% {
+        content: "";
+    }
+}
+
+
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.typewriter {
+    --caret: currentcolor;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+}
+.service {
+    cursor: pointer;
+    color: #2A699B;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: #2A699B;
+        color: white !important;
+    }
+}
+.typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+    border-right: 0;
+}
+
+@include media-breakpoint-down(sm){
+    .text-sm-center-custome{
+       text-align: center;
+       margin-bottom: 16px;
+    }
+    .algin-custome{
+        justify-content: center;
+    }
+}
+ 

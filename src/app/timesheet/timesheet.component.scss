@@ -1,0 +1,100 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.blue-layout {
+    background-color: #161736;
+    color: white;
+}
+
+.btn-orange {
+    background-color: #FC8A17;
+    color: white;
+
+    &:focus {
+        border: 1px solid #FC8A17;
+        color: #FC8A17;
+        background-color: #fff;
+    }
+}
+
+.bg-table {
+   background-color:#eeeeee ;
+  
+}
+
+.text-green {
+    color: #53d317;
+}
+
+.btn-green {
+    background-color: #5FA43F;
+    color: #ffffff;
+}
+
+.text-gray {
+    color: #545455;
+}
+
+.text-darkblue {
+    color: #161736;
+}
+
+.btn-main {
+    background-color: #2A699B;
+    color: #ffffff;
+}
+
+.bg-light-main {
+    background-image: linear-gradient(to right, #151635, #232560, #2A699B, );
+
+}
+
+.bg-light-orange {
+    // background-image: linear-gradient(to right, #FC8A17, #f79c41,#f7be85, );
+    background-color: #e8e8e8;
+
+}
+
+.text-muted-light {
+    color: #c5c4c4;
+}
+
+.btn-darkblue {
+    background-color: #151635;
+    color: #fff;
+}
+
+.bg-gray {
+    background-color: #f3f3f3;
+}
+
+thead th {
+    font-weight: 400;
+    color: #999999 !important;
+}
+
+.border-md-end {
+
+    border-right: 1px solid #dee2e6;
+}
+
+.btn-custom, .btn-custom:focus, .btn-custom-orange, .btn-custom-orange:focus {
+    color: #2A699B;
+    background-color: #b6deff;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    
+}
+
+
+.fs-cutome{
+    font-size: 14px !important;
+    
+}
+@include media-breakpoint-down(sm) {
+    .border-md-end {
+        border-right: none;
+    }
+}

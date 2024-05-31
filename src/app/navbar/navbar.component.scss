@@ -1,0 +1,66 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.btn-orange{
+    background-color: #FC8A17;
+    border: none;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+}
+.text-main{
+    color: #2A699B;
+}
+
+.bg-nav{
+    // background-image: linear-gradient(to right, #151635, #232560,#2A699B, );
+    background-color: #fff;
+    color: #FC8A17;
+
+}
+.nav-btn-collapse{
+    visibility: hidden;
+}
+.navbar{
+    z-index: 999;
+}
+.pointer{
+    cursor: pointer;
+}
+.fs-custome{
+    font-size: 18px;
+}
+.border-main{
+    border-color: #2A699B;
+}
+.collapse-btn{
+    color: #2A699B;
+}
+.collapse-btn:hover{
+   background-color: #2A699B;
+   color: #fff !important;
+}
+.w-10{
+    width: 2.5rem
+}
+.text-main{
+    color: #2A699B;
+}
+.border-main{
+    border-color: #2A699B;
+}
+@include media-breakpoint-down(sm){
+    .w-sm-100{
+        width: 100% !important;
+    }
+    .nav-btn-collapse{
+        visibility: visible;
+    }
+}
+
+
