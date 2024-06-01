@@ -38,15 +38,16 @@
 .border-main{
     border-color: #2A699B;
 }
-.collapse-btn{
-    color: #2A699B;
-}
-.collapse-btn:hover{
+
+.btn-collapse-custome:hover{
    background-color: #2A699B;
    color: #fff !important;
 }
+.btn-collapse-custome{
+    color: #2A699B;
+}
 .w-10{
-    width: 2.5rem
+    width: 2.3rem
 }
 .text-main{
     color: #2A699B;
@@ -54,6 +55,21 @@
 .border-main{
     border-color: #2A699B;
 }
+.w-sm-100{
+    border-color: #2A699B;
+
+}
+@include media-breakpoint-down(md){
+
+    .nav-btn-collapse{
+        visibility: visible;
+    }
+    .d-sm{
+        display: flex;
+        justify-content: end;
+    }
+}
+
 @include media-breakpoint-down(sm){
     .w-sm-100{
         width: 100% !important;
@@ -61,6 +77,8 @@
     .nav-btn-collapse{
         visibility: visible;
     }
+ 
+  
 }
 
 

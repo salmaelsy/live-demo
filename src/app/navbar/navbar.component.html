@@ -1,33 +1,42 @@
 <nav class="navbar navbar-expand-lg text-white bg-nav nav">
 
-    <div class="container justify-content-between flex-wrap">
+    <div class="container  justify-content-between flex-wrap ">
         <div>
-            <a class="navbar-brand" href="#" >
+            <a class="navbar-brand" href="#">
                 <img src="../../assets/media/images/logo3 (1).jpg" alt="" class="w-50">
             </a>
         </div>
 
-        <div class=" w-sm-10 d-flex align-items-center justify-content-end">
-
-            
-            <div>
-                <button class="navbar-toggler collapse-btn border-main" type="button" data-bs-toggle="collapse"
+        <div>
+            <div class="w-100 d-flex justify-content-end ">
+                <!-- <button class="navbar-toggler  collapse-btn btn-collapse-custome border-main" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation" *ngIf="!hideProfileLinks">
+                    aria-label="Toggle navigation" *ngIf="hideProfileLinks">
                     <span class="fa-solid fa-bars-staggered   border-white"></span>
-                </button>
+                </button> -->
 
-                <button (click)="showSideNav()" *ngIf="hideProfileLinks"
-                    class="  btn border-main collapse-btn nav-btn-collapse mx-2">
+                <button *ngIf="!hideProfileLinks" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    class="btn border-main  collapse-btn btn-collapse-custome nav-btn-collapse ">
                     <span class="fa-solid fa-bars-staggered  "></span>
                 </button>
 
+                <span *ngIf="hideProfileLinks" class="mt-2  collapse-btn text-main pointer mx-2"
+                    routerLink="/trax/home">Home
+                </span>
+                <span *ngIf="hideProfileLinks" class="mt-2  collapse-btn text-main pointer mx-2"
+                    (click)="Logout()">Logout<i class="fa-solid fa-arrow-right-from-bracket text-main ms-1"></i>
+                </span>
+                <button (click)="showSideNav()" *ngIf="hideProfileLinks"
+                    class="btn border-main  collapse-btn btn-collapse-custome nav-btn-collapse mx-2">
+                    <span class="fa-solid fa-bars-staggered  "></span>
+                </button>
             </div>
+        </div>
 
-          
-        <div class="collapse navbar-collapse" id="navbarNav" >
-            <ul class="navbar-nav text-center ">
-                <li class="nav-item active mx-2 fs-custome" >
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav text-center d-flex justify-content-end w-100">
+                <li class="nav-item active mx-2 fs-custome" *ngIf="!hideProfileLinks ">
                     <a class="nav-link text-main" routerLink="/trax/home" routerLinkActive="active">Home <span
                             class="sr-only">(current)</span></a>
                 </li>
@@ -37,32 +46,29 @@
                 <li class="nav-item mx-2 fs-custome pointer" *ngIf="!hideProfileLinks">
                     <a class="nav-link text-main">About us</a>
                 </li>
-               
-                <li class="nav-item mx-2 fs-custome" *ngIf="!hideProfileLinks">
-                    <button class="btn btn-orange rounded-pill py-1 px-2 ">
-                        <a class="nav-link text-white py-1" routerLink="/trax/home" routerLinkActive="active"
-                            fragment="Contact">Contact Us</a>
-                    </button>
+
+
+                <li class="nav-item mx-2 fs-custome  pb-0 px-2" *ngIf="isLoggedIn && !hideProfileLinks">
+                    <a class="nav-link text-main" routerLink="/profile" routerLinkActive="active">Profile</a>
                 </li>
 
                 <li class="nav-item mx-2 fs-custome" *ngIf="!isLoggedIn && !hideProfileLinks">
                     <a class="nav-link text-main" routerLink="/login" routerLinkActive="active">Login</a>
                 </li>
 
+                <li class="nav-item mx-2 fs-custome" *ngIf="isLoggedIn && !hideProfileLinks">
+                    <a class="nav-link text-main" (click)="Logout()">Logout<i
+                            class="fa-solid fa-arrow-right-from-bracket text-main ms-1"></i></a>
+                </li>
+
+                
+                <li class="nav-item mx-2 fs-custome" *ngIf="!hideProfileLinks">
+                    <button class="btn btn-orange rounded-pill pt-1 px-2 ">
+                        <a class="nav-link text-white py-1" routerLink="/trax/home" routerLinkActive="active"
+                            fragment="Contact">Contact Us</a>
+                    </button>
+                </li>
             </ul>
-
-
         </div>
-
-
-        <div  class="ms-4" *ngIf="isLoggedIn">
-            <img src="../../assets/media/images/person.jfif" alt="" class="rounded-circle w-10 pointer ps-1 pt-1" routerLink="/profile">
-            
-            <span class="text-main  pointer ms-3" (click)="Logout()" >Logout<i
-                    class="fa-solid fa-arrow-right-from-bracket text-main ms-1"></i></span>
-        </div>
-
-    </div>
-
     </div>
 </nav>
